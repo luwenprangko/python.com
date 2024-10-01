@@ -40,20 +40,30 @@ pre {
     padding: 5px 10px;
     cursor: pointer;
     font-size: 14px;
+    z-index: 1; /* Ensures the button is above the code */
 }
 
-.copy-button:hover {
-    background-color: #0056b3;
+pre code {
+    overflow-x: auto;
+    display: block;
+    white-space: pre-wrap; /* Ensures code wraps nicely within the pre element */
+    padding-right: 50px; /* Adds padding to avoid text being covered by the copy button */
 }
 </style>
 
 <nav class="navbar navbar-dark bg-dark fixed-top" style="height: 56px;">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" id="toggleSidebar" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler me-2" type="button" id="toggleSidebar" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <a class="navbar-brand mx-auto text-center" href="#" style="position: absolute; left: 50%; transform: translateX(-50%);">
+            Python, Anyone?
+        </a>
     </div>
 </nav>
+
 <div id="sidebarOffcanvas" class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" aria-labelledby="sidebarLabel"  style="width: 300px;">
     <div class="offcanvas-header">
         <h2 id="sidebarLabel" class="fw-bolder text-white">Topics</h2>
@@ -68,7 +78,6 @@ pre {
                     Home
                 </a>
             </li>
-            <br>
             <li>
                 <a href="#" class="nav-link text-white active" aria-current="page">
                     <i class="bi bi-filetype-py"></i>

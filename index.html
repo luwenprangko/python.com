@@ -11,15 +11,32 @@
 </head>
 <body>
 
-
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+.pointing-image {
+    position: absolute;
+    left: 25px;
+    top: 60px;
+}
+</style>
 
 <nav class="navbar navbar-dark bg-dark fixed-top" style="height: 56px;">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" id="toggleSidebar" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler me-2" type="button" id="toggleSidebar" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <a class="navbar-brand mx-auto text-center" href="#" style="position: absolute; left: 50%; transform: translateX(-50%);">
+            Python, Anyone?
+        </a>
     </div>
 </nav>
+
 <div id="sidebarOffcanvas" class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" aria-labelledby="sidebarLabel"  style="width: 300px;">
     <div class="offcanvas-header">
         <h2 id="sidebarLabel" class="fw-bolder text-white">Topics</h2>
@@ -34,7 +51,6 @@
                     Home
                 </a>
             </li>
-            <br>
             <li>
                 <a href="./function.html" class="nav-link text-white">
                     <i class="bi bi-filetype-py"></i>
@@ -58,8 +74,13 @@
     </div>
 </div>
 
+<!-- Positioned image to the left, pointing to the menu button -->
+<div class="arrow pointing-image">
+    <img src="point.png" class="rounded" alt="h4Cker" width="300">
+</div>
 
-
+<div class="container">
+</div>
 
 </body>
 </html>
